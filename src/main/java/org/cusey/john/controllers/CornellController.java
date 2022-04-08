@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/cornell")
 public class CornellController {
 	
-	@GetMapping("/student")
+	
+	//http://localhost:8083/cornell/api/dean
+	@GetMapping("/api/dean")
 	public String studentInfo() {
 		
 		return "John Cusey";
