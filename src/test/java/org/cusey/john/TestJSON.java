@@ -128,8 +128,11 @@ class TestJSON {
 				StoreResponse response = Json.jsonTOObject("RES001.json", StoreResponse.class  );
 				
 				Transaction stage = response.getStage();
-				
 				for(BackErrors element:  stage.getBack()) {
+					System.out.println(element.toString());
+				}
+				
+				for(Purchase element:  response.getProduct()) {
 					System.out.println(element.toString());
 				}
 				

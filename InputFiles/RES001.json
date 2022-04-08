@@ -5,7 +5,23 @@
 				"staus":"FC001",							    	
 				"details":"Student Register completed"
 			}]
-	 }
+	 },
+	 "product":[{
+	 
+	 		"cost":"123.50",
+			"period":"201402",
+			"transactionDate":"20120816",
+			"startDate":"20210714",
+			"productCode":"GOI78",
+			"studentId":"67f99418-3b7d-46e1-ae87-9d6052f5cee3 ",
+			"creditCardType":"MASTER",
+			"forwardTo":"APH",
+			"holdDate":"20220831",
+			"collegeName":"Fortis Community College",
+			"collegeCatolog":"1234567890123456",
+			"collegeType":"P",
+			"method":"YUN"
+	 }]
 
 
 }
