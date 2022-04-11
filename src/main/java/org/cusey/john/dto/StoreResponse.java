@@ -5,7 +5,8 @@ import java.util.List;
 
 public class StoreResponse {
 	
-	public  Transaction stage; 				
+	public  Transaction stage; 	
+	
 	public List<Purchase> product = null;
 	
 	public Transaction getStage() {
@@ -19,6 +20,7 @@ public class StoreResponse {
 	}
 	public void setProduct(List<Purchase> product) {
 		this.product = product;
-	}	
+	}
 
+	
 }

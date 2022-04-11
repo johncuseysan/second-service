@@ -1,10 +1,16 @@
 {
 	"stage":{
+			"studentId":"24753f48-c517-4b86-92e4-d07da3eeb834",
+			"staus":"FC001",							    	
+	        "details":"Student Register completed",	
 	
 			"back":[{
-				"staus":"FC001",							    	
-				"details":"Student Register completed"
-			}]
+						"code":"PC300"
+					},
+					{
+						"code":"PC200"
+					}	
+			]
 	 },
 	 "product":[{
 	 

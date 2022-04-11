@@ -132,6 +132,8 @@ class TestJSON {
 					System.out.println(element.toString());
 				}
 				
+				System.out.println(stage.toString());
+				
 				for(Purchase element:  response.getProduct()) {
 					System.out.println(element.toString());
 				}
