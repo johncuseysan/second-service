@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c764d2ac-2701-4932-9648-c78077f1e233" activeEnvironment="Default" name="Cornell_EndpointCheck" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="a0de631f-e650-4177-aaa6-447c82108f62" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8083" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8083</con:endpoint></con:endpoints><con:resource name="Search" path="/cornell/api/student/search" id="900561da-fc1b-4b6c-84da-30b14388db46"><con:settings/><con:parameters/><con:method name="Search 1" id="ec07f493-2b42-4f77-961a-da609444e4d8" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sear="http://localhost/cornell/api/student/search">sear:Response</con:element></con:representation><con:request name="Request 1" id="c1b3a7f7-9616-4dd4-a8d5-b7f2554096eb" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="COLLEGE_ID" value=""/>
+  <con:entry key="DATA" value="RES001"/>
+  <con:entry key="TOKEN_IP" value=""/>
+  <con:entry key="TOKEN" value=""/>
+  <con:entry key="PROJECT_ID" value=""/>
+  <con:entry key="TOKEN_AUTH" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request>{ 	
+	"searchStartDate":"08122020",
+	"searchEndDate":"08122021",
+	"courseNumber":"12345",
+	"courseCode":"CIS123",
+	"studentId":"35d39d9c-b113-11ec-b909-0242ac120002",
+	"passCourse":"PASS"
+}</con:request><con:originalUri>http://localhost/cornell/api/student/search</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

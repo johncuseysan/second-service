@@ -11,6 +11,15 @@ public class Header {
 	public String data;						//1
 	public String tokenAuth; 				//6
 	
+	
+	public void setAll(String token, String tokenIP, int collegeId, int projectId, String data, String tokenAuth) {
+		this.token = token;
+		this.tokenIP = tokenIP;
+		this.collegeId = collegeId;
+		this.projectId = projectId;
+		this.data = data;
+		this.tokenAuth = tokenAuth;
+	}
 	public String getToken() {
 		return token;
 	}
