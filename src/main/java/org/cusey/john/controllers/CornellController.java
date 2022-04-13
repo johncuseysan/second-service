@@ -2,10 +2,15 @@ package org.cusey.john.controllers;
 
 import java.io.IOException;
 
+import org.slf4j.*;
 import org.cusey.john.components.Json;
+import org.cusey.john.dto.BackErrors;
 import org.cusey.john.dto.CustomerRequest;
 import org.cusey.john.dto.Header;
+import org.cusey.john.dto.Purchase;
 import org.cusey.john.dto.StoreResponse;
+import org.cusey.john.dto.Transaction;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +24,9 @@ import com.fasterxml.jackson.databind.DatabindException;
 public class CornellController {
 	
 	
+	private static final Logger log = LoggerFactory.getLogger(CornellController.class);
+ 
+	
 	@Autowired
 	private Header header;
 	
@@ -31,10 +39,11 @@ public class CornellController {
 	
 	//http://localhost:8083/cornell/api/dean
 	@GetMapping("/api/dean")
-	public String studentInfo() {
+	public String collegeInfo() {
 		
-		return "John Cusey";
+		return "Tom Jones";
 	}
+	
 	
 	//http://localhost:8083/cornell/api/student/search
 	@RequestMapping(method = RequestMethod.POST, path = "/api/student/search", consumes = MediaType.APPLICATION_JSON_VALUE)
@@ -49,9 +58,17 @@ public class CornellController {
     		
     ){
 		
+		
+		log.info("<********************************************>");
 
 		this.request = request;
 		header.setAll(token, tokenIP, collegeId, projectId, data, tokenAuth);
+		
+		log.info(request.toString());
+		log.info(header.toString());
+		
+		
+		log.info("data: "+ data );
 		
 		try {
 			response = Json.jsonTOObject(header.getData() +".json", StoreResponse.class  );
@@ -64,6 +81,17 @@ public class CornellController {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		
+		Transaction stage = response.getStage();
+		for(BackErrors element:  stage.getBack()) {
+			System.out.println(element.toString());
+		}
+		
+		System.out.println(stage.toString());
+		
+		for(Purchase element:  response.getProduct()) {
+			System.out.println(element.toString());
 		}
 		
 		
