@@ -26,7 +26,8 @@
 			"collegeName":"Fortis Community College",
 			"collegeCatolog":"1234567890123456",
 			"collegeType":"P",
-			"method":"YUN"
+			"method":"YUN",
+			"isAction":"true"
 	 }]
 
 
