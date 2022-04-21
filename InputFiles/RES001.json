@@ -1,11 +1,11 @@
 {
 	"stage":{
-			"studentId":"24753f48-c517-4b86-92e4-d07da3eeb834",
-			"staus":"FC001",							    	
+			"studentId":"fb932851-3b73-41b3-86a7-7cc9ff3db065",
+			"staus":"CC001",							    	
 	        "details":"Student Register completed",	
 	
 			"back":[{
-						"code":"PC300"
+						"code":"PC400"
 					},
 					{
 						"code":"PC200"
@@ -18,12 +18,12 @@
 			"period":"201402",
 			"transactionDate":"20120816",
 			"startDate":"20210714",
-			"productCode":"GOI78",
+			"productCode":"CCI78",
 			"studentId":"67f99418-3b7d-46e1-ae87-9d6052f5cee3 ",
 			"creditCardType":"MASTER",
 			"forwardTo":"APH",
 			"holdDate":"20220831",
-			"collegeName":"Fortis Community College",
+			"collegeName":"Cornell College",
 			"collegeCatolog":"1234567890123456",
 			"collegeType":"P",
 			"method":"YUN",
