@@ -51,18 +51,17 @@ public class CornellController {
     		@RequestBody CustomerRequest request,
     		@RequestHeader(name = "TOKEN", required = false, defaultValue = "9") final String token,
     		@RequestHeader(name = "TOKEN_IP", required = false, defaultValue = "9") final String tokenIP,
-    		@RequestHeader(name = "COLLEGE_ID", required = false, defaultValue = "9") final int collegeId,
     		@RequestHeader(name = "PROJECT_ID", required = false, defaultValue = "9") final int projectId,
+    		@RequestHeader(name = "COLLEGE_ID", required = false, defaultValue = "9") final int collegeId,
     		@RequestHeader(name = "DATA", required = false, defaultValue = "9") final String data,
-    		@RequestHeader(name = "TOKEN_AUTH", required = false, defaultValue = "9") final String tokenAuth
+    		@RequestHeader(name = "TOKEN_AUTH_CODE", required = false, defaultValue = "9") final String tokenAuthCode
     		
     ){
 		
 		
-		log.info("<********************************************>");
 
 		this.request = request;
-		header.setAll(token, tokenIP, collegeId, projectId, data, tokenAuth);
+		header.setAll(token, tokenIP, collegeId, projectId, data, tokenAuthCode);
 		
 		log.info(request.toString());
 		log.info(header.toString());
